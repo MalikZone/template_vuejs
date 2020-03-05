@@ -21,7 +21,9 @@
             </nav>
         </div>
     </div>
-        
+    
+    
+    
     <div class="footer">
         <div class="container">
             <h6>GET IN TOUCH</h6>
