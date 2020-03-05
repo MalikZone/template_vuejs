@@ -6,9 +6,9 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="p-4">
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><router-link to="/about" class="btn btn-primary float-right">About</router-link></li>
+                        <li><router-link to="/galleries" class="btn btn-primary float-right">Gallery</router-link></li>
+                        <li><router-link to="/" class="btn btn-primary float-right">Home</router-link></li>
                     </ul>
                 </div>
             </div>
@@ -22,7 +22,7 @@
         </div>
     </div>
     
-    
+        <router-view></router-view>
     
     <div class="footer">
         <div class="container">

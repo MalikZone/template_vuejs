@@ -8,6 +8,25 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+import Home from './components/Home.vue'
+import Galleries from './components/Galleries.vue'
+import About from './components/About.vue'
+
+const routes = [
+    { path: '/', component: Home },
+    { path: '/galleries', component: Galleries },
+    { path: '/about', component: About },
+]
+
+const router = new VueRouter({
+    routes // short for `routes: routes`
+})
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -28,5 +47,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
-});
+    router
+}).$mount('#app')
